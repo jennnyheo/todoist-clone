@@ -1,0 +1,422 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600&display=swap');
+/* //general setting// */
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-family: 'Mukta', sans-serif;
+    color: #202020;
+    background-color: #fafafa;
+}
+/* //header setting// */
+
+/* initializing ul styles */
+ul, li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/* logo */
+.logo{
+    display: flex;
+    justify-content: center;
+    background-color: #FF6B6B;
+    width: 100%;
+}
+.logo > img{
+    width: 80px;
+    height: 40px;
+
+}
+/* lefted menu button */
+.settingBox{
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 10px
+}
+.settingBox > li {
+    color: white;
+    background-color: transparent;
+    border: none;
+    margin-right: 10px;
+}
+.settingBox > li > button{
+    color: white;
+    background-color: transparent;
+    border: none;
+
+}
+
+
+/* sidebar */
+.sidebar{
+    /* margin-left: 10px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebarBox > li{
+    list-style: none;
+    padding-left: 0.5em;
+    cursor: pointer;
+    font-size: 2rem;
+}
+.sidebarBox > li:hover{
+    font-weight: 800;
+    background-color: white;
+    /* border-top: 0.5px solid #cacaca;
+    border-bottom: 0.5px solid #cacaca; */
+}
+.sidebar__middle{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.middleBar{
+    padding: 10px;
+    color: #1D7A8C;
+}
+.sidebarAddproject{
+    cursor: pointer;
+    height: 40px;
+    width: 25%;;
+    /* background-color: white;
+    border-top: 0.5px solid #cacaca;
+    border-bottom: 0.5px solid #cacaca; */
+}
+.projectBox{
+    padding-top: 5%;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+/* .sidebar__project-name{
+
+} */
+.sidebar__project-delete{
+    position: absolute;
+    right: 0;
+}
+.sidebar__dot{
+    color: #1D7A8C;
+    padding: 0 10px 0 10px;
+}
+
+.tashicon {
+    /* display: none; */
+    color: #cacaca;
+}
+.sidebar__project-name{
+    font-weight: 700;
+}
+.sidebar__project-name:hover,
+.trashicon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    /* display: block; */
+}
+h2{
+    font-size: 1rem;
+}
+
+span{
+    font-size: 0.7rem;
+}
+.sidebar__projects{
+    margin-left: 5px;
+}
+
+
+/* //show the delete modal */
+.proejct-delete-modal{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-delete-modal__inner{
+    position: absolute;
+    width: 150px;
+    background-color: white;
+    box-shadow: 3px -2px 39px -25px rgba(0, 0, 0, 0.5);
+    top: 10px;
+    right: 0;
+    z-index: 99;
+}
+.project-delete-modal__inner > p {
+    margin-top: 5px;
+    padding-top: 3px;
+    margin-bottom: 5px;
+    line-height: normal;
+    font-weight: normal;
+    font-size: 12px;
+    text-align: center;
+}
+
+.project-delete-modal__inner > button{
+    border: none;
+    background-color: #FF6B6B;
+    color: white;
+    font-size: 12px;
+    height: 20px;
+    margin-bottom: 2px;
+    margin-left: 25%; 
+}
+.project-delete-modal__inner > span{
+    border: none;
+    font-size: 12px;
+    margin-left: 5px;
+    border: 1px solid #cacaca;
+    border-radius: 3px;
+    /* height: 20px; */
+    padding: 0 2px 0 2px;
+    margin-bottom: 2px;
+}
+.add-project{
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.add-project__plus{
+    color:#FF6B6B;
+    font-size: 12px;
+    font-weight: 500;
+}
+.add-project__input{
+    display: flex;
+    width: 25%;
+    height: 1.5em;
+}
+.add-project__text{
+    text-align: center;
+    padding-left: 5px;
+}
+.add-project__name{
+    border: none;
+    width: 100%;
+}
+.add-project__submit{
+    border: none;
+    width: 20%;
+    font-size: 12px;
+    margin: 2px;
+    background-color: #FF6B6B;
+    color: white;
+    width: 50px;
+    font-size: 10px;
+    border-radius: 5px;
+    height: 20px;
+}
+.add-project__cancel{
+    font-size: 13px;
+    margin-top: 2px;
+    height: 20px;
+    padding: 4px 5px 3px 5px;
+    font-size: 10px;
+    border: 1px solid rgba(201, 201, 201, 0.6); 
+    border-radius: 5px;
+    background-color: white;
+}
+/* //task */
+.taskName{ 
+    margin-left: 15px;
+}
+.tasks{
+    width: 650px;
+    background-color: white;
+    margin-left: 250px;
+    min-height: calc(100vh);
+    vertical-align: top;
+    padding: 20px 40px 80px 40px;
+    position: absolute;
+    top: 40px;
+    z-index: 0;
+}
+.checkbox-holder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+.checkbox{
+    cursor: pointer;
+    border-color: gray;
+    color: #343434;
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    border: 1px solid gray;
+    border-radius: 16px;
+}
+.tasks__list > li{
+    margin-left: 15px;
+    background-color: white;
+    /* border-top: 0.5px solid #cacaca; */
+    /* background-color: #fafafa; */
+    height: 30px;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+
+    margin-left: 30px;
+    width: 80%;
+}
+
+/* p[class^="add-task"]{
+    background: rgba(102, 102, 102, 0.5);
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+
+} */
+.add-task{
+    margin-left: 15px;
+    position: relative;
+}
+.add-task__main{
+    overflow: visible;
+    cursor: pointer;
+    position: absolute;
+    z-index: 9999;
+    left: 70px;
+    background-color: white;
+    padding: 10px;
+}
+.add-task__main::after{
+    left: 100px;
+}
+.add-task__shallow{
+    margin-left: 12px;
+    margin-top: 5px;
+    font-weight: 700;
+    cursor: p;
+}
+
+.add-task__plus{
+    padding-right: 5px;
+    color:#FF6B6B;
+}
+
+
+.add-task__content{
+    display: block;
+    margin-top: 5px;
+    width: 350px;
+    height: 27px;
+    border: 2px solid rgba(201, 201, 201, 0.5);
+    margin-bottom: 10px;
+}
+
+.add-task__submit{
+    width: 60px;
+    height: 23px;
+    border: none;
+    background-color: #FF6B6B;
+    color: white;
+    border-radius: 5px;
+    margin-right: 5px;
+    font-size: 10px;
+}
+
+.add-task__cancel{
+    display: inline-block;
+    border: 1px solid rgba(201, 201, 201, 0.6); 
+    font-size: 10px;
+    width: 10%;
+    height: 23px;
+    border-radius: 5px;
+    text-align: center;
+    position: absolute;
+    padding-top: 5.5px;
+}
+
+.add-task__project{
+    position: absolute;
+    right: 20px;
+    font-size: 17px;
+    margin-top: 3px;
+    color: rgba(201, 201, 201, 0.9);
+}
+.add-task__date{
+    position: absolute;
+    right: 50px;
+    font-size: 17px;
+    margin-top: 3px;
+    color: rgba(201, 201, 201, 0.9);
+}
+
+/* //project overlay */
+
+.project-overlay__list{
+    position: absolute;
+    background-color: white;
+    right: 16%;
+    top: 120px;
+    width: 78%;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: rgba(201, 201, 201, 0.2) 1px 1px 10px 1px;
+}
+
+.project-overlay__list > li{
+    padding: 7px 7px 7px 10px;
+    font-size: 12px;
+    border-bottom: 0.5px solid rgba(201, 201, 201, 0.2);
+}
+.project-overlay__list > li:hover{
+    background-color: rgba(201, 201, 201, 0.2);
+    transition: 0.5s ease;
+}
+
+/* //task date  */
+
+.task-date__list{
+    position: absolute;
+    width: 25%;
+    right: 16%;
+    top: 13em;
+    box-shadow: rgba(201, 201, 201, 0.2) 1px 1px 10px 1px;
+}
+
+.task-date__list > li{
+    padding: 5px;
+    font-size: 18x;
+    font-weight: 700;
+}
+.task-date__list > li:hover{
+    background-color: rgba(201, 201, 201, 0.2);
+    transition: 0.5s ease;
+}
+.task-date__list > li > span{
+    padding-left: 5px;
+}
+
+/* //darkmode */
+
+.darkmode{
+        background-color: #282828;
+        border-color: transparent;
+}
+
+/* //quick-add-task */
+
